@@ -10,29 +10,29 @@ import { useState } from "react";
 
 function Home({ isLogin }) {
     console.log("home", isLogin)
-    if (!isLogin) return (<Navigate replace to="/login" />)
-    // const [userData, setUserData] = useState({
-    //     labels: UserData.map((data) => data.year),
-    //     datasets: [
-    //         {
-    //             label: "Users Gained",
-    //             data: UserData.map((data) => data.userGain),
-    //             backgroundColor: [
-    //                 "rgba(75,192,192,1)",
-    //                 "#ecf0f1",
-    //                 "#50AF95",
-    //                 "#f3ba2f",
-    //                 "#2a71d0",
-    //             ],
-    //             borderColor: "black",
-    //             borderWidth: 2,
-    //         },
-    //     ],
-    // });
+    // if (!isLogin) return (<Navigate replace to="/login" />)
+    const [userData, setUserData] = useState({
+        labels: UserData.map((data) => data.year),
+        datasets: [
+            {
+                label: "Users Gained",
+                data: UserData.map((data) => data.userGain),
+                backgroundColor: [
+                    "rgba(75,192,192,1)",
+                    "#ecf0f1",
+                    "#50AF95",
+                    "#f3ba2f",
+                    "#2a71d0",
+                ],
+                borderColor: "black",
+                borderWidth: 2,
+            },
+        ],
+    });
     return (
 
         <div >
-            {/* <div style={{ "width": "auto", "vertical-align": "middle" }}>
+            <div style={{ "width": "auto", "vertical-align": "middle" }}>
                 <BarChart chartData={userData} />
             </div>
             <div style={{ "width": "auto", "vertical-align": "middle" }}>
@@ -41,7 +41,7 @@ function Home({ isLogin }) {
 
             <div style={{ "width": "auto", "vertical-align": "middle" }}>
                 <PieChart chartData={userData} />
-            </div> */}
+            </div>
             {/* <div><Social/></div> */}
         </div>
 
