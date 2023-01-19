@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import { Navigate } from "react-router-dom";
 // import BarChart from "../Chart/chart01";
 // import LineChart from "../Chart/chart02";
@@ -8,8 +8,8 @@ import { useState } from "react";
 
 
 function Home({ isLogin }) {
-    console.log("home", isLogin)
-    // if (!isLogin) return (<Navigate replace to="/login" />)
+    // console.log("home", isLogin)
+    
     const [userData, setUserData] = useState({
         labels: UserData.map((data) => data.year),
         datasets: [
@@ -91,6 +91,8 @@ function Home({ isLogin }) {
             name: "Computer"
         }
     ]
+
+    if (true) return <Navigate replace to="/login" />
 
     return (
         <div className=" grid grid-cols-4" >
