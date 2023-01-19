@@ -7,7 +7,6 @@ import { UserData } from "../Chart/data";
 import { useState } from "react";
 
 
-
 function Home({ isLogin }) {
     console.log("home", isLogin)
     // if (!isLogin) return (<Navigate replace to="/login" />)
@@ -32,16 +31,34 @@ function Home({ isLogin }) {
     return (
 
         <div >
-            <div style={{ "width": "auto", "vertical-align": "middle" }}>
-                <BarChart chartData={userData} />
-            </div>
-            <div style={{ "width": "auto", "vertical-align": "middle" }}>
-                <LineChart chartData={userData} />
-            </div>
-
-            <div style={{ "width": "auto", "vertical-align": "middle" }}>
+            <div style={{"width":"300px","display":"flex" ,"grid-column":"1/3"}} >
+                <BarChart chartData={userData}  />
+                <LineChart chartData={userData}/>
+                <PieChart chartData={userData} />
+                <BarChart chartData={userData}  />
+                <LineChart chartData={userData}/>
+                <PieChart chartData={userData} />
+                <BarChart chartData={userData}  />
+                <LineChart chartData={userData}/>
+                <PieChart chartData={userData} />
+                <BarChart chartData={userData}  />
+                <LineChart chartData={userData}/>
+                <PieChart chartData={userData} />
+                <BarChart chartData={userData}  />
+                <LineChart chartData={userData}/>
+                <PieChart chartData={userData} />
+                <BarChart chartData={userData}  />
+                <LineChart chartData={userData}/>
+                <PieChart chartData={userData} />
+                <BarChart chartData={userData}  />
+                <LineChart chartData={userData}/>
                 <PieChart chartData={userData} />
             </div>
+            {/* <div style={{ "width":"300px"}}>
+            </div>
+
+            <div style={{ "width":"300px"}}>
+            </div> */}
             {/* <div><Social/></div> */}
         </div>
 
