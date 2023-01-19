@@ -28,53 +28,78 @@ function Home({ isLogin }) {
             },
         ],
     });
+
+    const DATA = [
+        {
+            name: "Table"
+        },
+        {
+            name: "Doll"
+        },
+        {
+            name: "PS5"
+        },
+        {
+            name: "Computer"
+        },
+        {
+            name: "Table"
+        },
+        {
+            name: "Doll"
+        },
+        {
+            name: "PS5"
+        },
+        {
+            name: "Computer"
+        },
+        {
+            name: "Table"
+        },
+        {
+            name: "Doll"
+        },
+        {
+            name: "PS5"
+        },
+        {
+            name: "Computer"
+        },
+        {
+            name: "Table"
+        },
+        {
+            name: "Doll"
+        },
+        {
+            name: "PS5"
+        },
+        {
+            name: "Computer"
+        },
+        {
+            name: "Table"
+        },
+        {
+            name: "Doll"
+        },
+        {
+            name: "PS5"
+        },
+        {
+            name: "Computer"
+        }
+    ]
+
     return (
-
-        <div >
-            <div className=" grid grid-cols-4" >
-                <div className=" bg-slate-600 w-[300px] h-[300px] flex m-4">
-
+        <div className=" grid grid-cols-4" >
+            {DATA.map(data => (
+                <div className=" bg-slate-400 w-[300px] h-[300px] flex m-4 items-center justify-center hover:bg-slate-800 duration-1000">
+                    <p className=" text-3xl text-white">{data.name}</p>
                 </div>
-                <div className=" bg-slate-600 w-[300px] h-[300px] flex m-4">
-                    
-                </div>
-                <div className=" bg-slate-600 w-[300px] h-[300px] flex m-4">
-                    
-                </div>
-                <div className=" bg-slate-600 w-[300px] h-[300px] flex m-4">
-                    
-                </div>
-                <div className=" bg-slate-600 w-[300px] h-[300px] flex m-4">
-                    
-                </div>
-                <div className=" bg-slate-600 w-[300px] h-[300px] flex m-4">
-                    
-                </div>
-                <div className=" bg-slate-600 w-[300px] h-[300px] flex m-4">
-                    
-                </div>
-                <div className=" bg-slate-600 w-[300px] h-[300px] flex m-4">
-                    
-                </div>
-                <div className=" bg-slate-600 w-[300px] h-[300px] flex m-4">
-                    
-                </div>
-                <div className=" bg-slate-600 w-[300px] h-[300px] flex m-4">
-                    
-                </div>
-                <div className=" bg-slate-600 w-[300px] h-[300px] flex m-4">
-                    
-                </div>
-            </div>
-            {/* <div style={{ "width":"300px"}}>
-            </div>
-
-            <div style={{ "width":"300px"}}>
-            </div> */}
-            {/* <div><Social/></div> */}
+            ))}
         </div>
-
-
     )
 }
 
